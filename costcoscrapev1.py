@@ -15,3 +15,13 @@ for post in soup.findAll("li", {"class": "product-item vline"}):
 	h=link = post.findAll("span", {"class": "notranslate"})[0].text
 	print (link)
 
+#try this code 
+import requests	
+from bs4 import Beautiful as b
+
+html = requests.get(base_url)
+soup = b(html, 'lxml')
+
+for post in soup.findAll("li", {"class": "product-item vline"}):
+	h=link = post.findAll("span", {"class": "notranslate"})[0].text
+	print (link)
